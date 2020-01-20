@@ -8,20 +8,7 @@
 
 class VescUart
 {
-    /** Struct to store the telemetry data returned by the VESC */
-    struct dataPackage {
-      float temp_vesc;
-      float motor_current;
-      float input_current;
-      float rpm;
-      float motor_speed;
-      float input_voltage;
-      float battery_level;
-      float amps_discharged;
-      float watt_discharged;
-      long tachometer;
-      uint8_t fault;
-    };
+    
 
   public:
     /**
@@ -30,7 +17,7 @@ class VescUart
     VescUart(void);
 
     /** Variabel to hold measurements returned from VESC */
-    dataPackage data;
+    mc_value data;
 
     /**
        @brief      Set the serial port for uart communication
